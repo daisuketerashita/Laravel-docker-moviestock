@@ -27,7 +27,7 @@
         <nav class="navbar navbar-expand-md navbar-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                <img class='navbar-logo' src="">
+                <img class='navbar-logo' src="{{ asset('images/logo.png') }}">
                     観た映画
                 </a>
                 <a class="navbar-brand" href="">
