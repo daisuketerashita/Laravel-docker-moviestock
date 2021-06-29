@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\StockController;
+use App\Http\Controllers\PlanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +17,5 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//ホーム画面（観た映画一覧）
+Route::get('/',[StockController::class,'index'])->name('index');

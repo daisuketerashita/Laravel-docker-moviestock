@@ -1,0 +1,27 @@
+.image-wrapper {
+    text-align: center;
+}
+.book-image {
+    height: 150px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+.book-title {
+    height: 1.5em;
+    overflow: hidden;
+}
+.description {
+    width: 100%;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.detail-btn {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+.pagination {
+    justify-content: center;
+}
