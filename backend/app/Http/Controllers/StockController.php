@@ -50,6 +50,6 @@ class StockController extends Controller
         Stock::insert($data);
 
         //トップへのリダイレクト
-        return redirect()->route('index');
+        return redirect('/')->with('flash_message', '登録が完了しました');
     }
 }
