@@ -6,7 +6,7 @@
 
 @section('content')
 <h2 class="nav-item" id="insert_button">
-    <a href="" class='nav-link'>追加する</a>
+    <a href="{{ route('create') }}" class='nav-link'>追加する</a>
 </h2>
 <div class="row justify-content-center">
     <div class="col-md-4">
