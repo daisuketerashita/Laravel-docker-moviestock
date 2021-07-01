@@ -10,8 +10,10 @@ class StockController extends Controller
 {
     //トップページ（観た映画一覧）
     public function index(){
-
-        return view('index');
+        //ユーザーに紐付いた一覧を取得
+        $stocks = Auth::user()->stocks()->orderBy('created_at', 'DESC')->simplePaginate(6);
+        
+        return view('index',compact('stocks'));
     }
 
 

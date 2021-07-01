@@ -40,4 +40,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //リレーション
+    public function stocks()
+    {
+        return $this->hasMany('App\Models\Stock');
+    }
+    public function plans()
+    {
+        return $this->hasMany('App\Models\Plan');
+    }
 }
