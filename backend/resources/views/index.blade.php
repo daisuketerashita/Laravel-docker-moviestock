@@ -22,7 +22,7 @@
                 <p class='description'>
                 {{ $stock->formatted_due_date }}
                 </p>
-                <a href="" class='btn btn-secondary detail-btn'>詳細を見る</a>
+                <a href="{{ route('detail',['id' => $stock->id]) }}" class='btn btn-secondary detail-btn'>詳細を見る</a>
             </div>
         </div>
     </div>

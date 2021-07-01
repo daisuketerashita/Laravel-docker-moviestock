@@ -15,7 +15,13 @@ class StockController extends Controller
         
         return view('index',compact('stocks'));
     }
-
+    
+    //観た映画の詳細ページ
+    public function detail($id){
+        //ユーザーに紐付いた詳細ページを取得
+        $stock = Auth::user()->stocks()->where('id',$id)->first();
+        return view('detail',compact('stock'));
+    }
 
     //観た映画登録ページの表示
     public function create(){
