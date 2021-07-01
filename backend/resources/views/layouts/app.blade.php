@@ -92,5 +92,16 @@
           <small class='copyright'>Laravel MovieStock 2021 copyright</small>
         </footer>
     </div>
+
+    <script>
+        //削除ボタン処理
+        function delete_alert(e){
+            if(!window.confirm('本当に削除しますか？')){
+      
+            return false;
+            }
+        document.deleteform.submit();
+        };
+    </script>
 </body>
 </html>

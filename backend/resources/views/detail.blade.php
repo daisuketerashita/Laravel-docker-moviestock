@@ -24,7 +24,7 @@
       </aside>
     </div>
     <a href="{{ route('index') }}" class='btn btn-info btn-back'>一覧へ戻る</a>
-    <a href=""class='btn btn-delete_stock' onClick="delete_alert(event);return false;">削除する</a>
+    <a href="{{ route('delete',['id' => $stock->id]) }}" class='btn btn-delete_stock' onClick="delete_alert(event);return false;">削除する</a>
   </div>
 </div>
 @endsection

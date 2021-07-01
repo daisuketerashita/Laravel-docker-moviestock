@@ -31,5 +31,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/stock/store/',[StockController::class,'store'])->name('store');
     //観た映画の詳細ページ
     Route::get('/detail/{id}/',[StockController::class,'detail'])->name('detail');
+    //観た映画の削除機能
+    Route::get('/delete/',[StockController::class,'delete'])->name('delete');
 
 });

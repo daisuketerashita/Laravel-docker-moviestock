@@ -15,7 +15,8 @@ class StockController extends Controller
         
         return view('index',compact('stocks'));
     }
-    
+
+
     //観た映画の詳細ページ
     public function detail($id){
         //ユーザーに紐付いた詳細ページを取得
@@ -23,10 +24,12 @@ class StockController extends Controller
         return view('detail',compact('stock'));
     }
 
+
     //観た映画登録ページの表示
     public function create(){
         return view('stock');
     }
+
 
     //観た映画の登録処理
     public function store(Request $request){
@@ -59,5 +62,14 @@ class StockController extends Controller
 
         //トップへのリダイレクト
         return redirect('/')->with('flash_message', '登録が完了しました');
+    }
+
+
+    //観た映画の削除機能
+    public function delete(Request $request){
+        $stock = Stock::find($request->id);
+        $stock->delete();
+        //トップへのリダイレクト
+        return redirect('/')->with('flash_message', '削除しました');
     }
 }
