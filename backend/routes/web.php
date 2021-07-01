@@ -19,3 +19,6 @@ Auth::routes();
 
 //ホーム画面（観た映画一覧）
 Route::get('/',[StockController::class,'index'])->name('index');
+
+//観た映画登録ページの表示
+Route::get('/stock/',[StockController::class,'create'])->name('create');

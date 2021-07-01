@@ -11,4 +11,10 @@ class StockController extends Controller
 
         return view('index');
     }
+
+
+    //観た映画登録ページの表示
+    public function create(){
+        return view('stock');
+    }
 }

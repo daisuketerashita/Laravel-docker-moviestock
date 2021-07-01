@@ -26,7 +26,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ route('create') }}">
                 <img class='navbar-logo' src="{{ asset('images/logo.png') }}">
                     観た映画
                 </a>
