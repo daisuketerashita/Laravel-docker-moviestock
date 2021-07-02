@@ -1,12 +1,12 @@
 .image-wrapper {
     text-align: center;
 }
-.book-image {
+.movie-image {
     height: 150px;
     margin-bottom: 20px;
     object-fit: cover;
 }
-.book-title {
+.movie-title {
     height: 1.5em;
     overflow: hidden;
 }

@@ -14,11 +14,11 @@
         <div class="card mb50">
             <div class="card-body">
                 @if(!empty($stock->image))
-                    <div class='image-wrapper'><img class='book-image' src="{{ asset('storage/images/'.$stock->image) }}"></div>
+                    <div class='image-wrapper'><img class='movie-image' src="{{ asset('storage/images/'.$stock->image) }}"></div>
                 @else
-                    <div class='image-wrapper'><img class='book-image' src="{{ asset('images/dummy.png') }}"></div>
+                    <div class='image-wrapper'><img class='movie-image' src="{{ asset('images/dummy.png') }}"></div>
                 @endif
-                <h3 class='h3 book-title'>{{ $stock->title }}</h3>
+                <h3 class='h3 movie-title'>{{ $stock->title }}</h3>
                 <p class='description'>
                 {{ $stock->formatted_due_date }}
                 </p>
