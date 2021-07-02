@@ -14,6 +14,11 @@ class PlanController extends Controller
         //ユーザーに紐付いた一覧を取得
         $plans = Auth::user()->plans()->orderBy('created_at', 'DESC')->simplePaginate(6);
 
-        return view('plan', compact('plans'));
+        return view('plan.index', compact('plans'));
+    }
+
+    //観たい映画の登録ページ表示
+    public function create(){
+        return view('plan.add');
     }
 }

@@ -36,5 +36,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/delete/',[StockController::class,'delete'])->name('delete');
 
     //観たい映画一覧
-    Route::get('/plan/',[PlanController::class,'index'])->name('plan');
+    Route::get('/plan/',[PlanController::class,'index'])->name('index.plan');
+    //観たい映画登録ページ
+    Route::get('/plan/add/',[PlanController::class,'create'])->name('create.plan');
 });
