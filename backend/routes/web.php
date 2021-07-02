@@ -20,7 +20,8 @@ Auth::routes();
 //ログイン後
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
+//使い方ページ
+Route::get('/howto/',[StockController::class,'howto'])->name('howto');
 
 //ログインユーザーのみアクセスできる
 Route::group(['middleware' => 'auth'], function () {
