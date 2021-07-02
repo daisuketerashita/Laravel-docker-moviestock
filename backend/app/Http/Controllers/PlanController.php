@@ -50,4 +50,12 @@ class PlanController extends Controller
         //観たい映画一覧ページへのリダイレクトとフラッシュメッセージ
         return redirect('/plan/')->with('flash_message', '登録が完了しました');
     }
+
+    //観たい映画の削除機能
+    public function delete(Request $request){
+        $plan = Plan::find($request->id);
+        $plan->delete();
+        //リダイレクト
+        return redirect('/plan/')->with('flash_message', '削除しました');
+    }
 }

@@ -36,9 +36,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/delete/',[StockController::class,'delete'])->name('delete');
 
     //観たい映画一覧
-    Route::get('/plan/',[PlanController::class,'index'])->name('index.plan');
+    Route::get('/plan/',[PlanController::class,'index'])->name('plan.index');
     //観たい映画登録ページ
-    Route::get('/plan/add/',[PlanController::class,'create'])->name('create.plan');
+    Route::get('/plan/add/',[PlanController::class,'create'])->name('plan.create');
     //観たい映画登録処理
-    Route::post('/plan/store/',[PlanController::class,'store'])->name('store.plan');
+    Route::post('/plan/store/',[PlanController::class,'store'])->name('plan.store');
+    //観たい映画の削除機能
+    Route::get('/plan/delete/',[PlanController::class,'delete'])->name('plan.delete');
 });

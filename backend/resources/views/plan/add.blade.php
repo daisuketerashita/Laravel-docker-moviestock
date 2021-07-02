@@ -15,7 +15,7 @@
 
 <div class="row justify-content-center container">
     <div class="col-md-10">
-      <form method='POST' action="{{ route('store.plan') }}" enctype="multipart/form-data">
+      <form method='POST' action="{{ route('plan.store') }}" enctype="multipart/form-data">
         @csrf
         <div class="card">
             <div class="card-body">
