@@ -39,4 +39,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/plan/',[PlanController::class,'index'])->name('index.plan');
     //観たい映画登録ページ
     Route::get('/plan/add/',[PlanController::class,'create'])->name('create.plan');
+    //観たい映画登録処理
+    Route::post('/plan/store/',[PlanController::class,'store'])->name('store.plan');
 });
