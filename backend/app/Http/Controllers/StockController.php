@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Stock;
 use Illuminate\Http\Request;
+use App\Models\Stock;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Auth;
 
 class StockController extends Controller
@@ -12,8 +13,8 @@ class StockController extends Controller
     public function index(){
         //ユーザーに紐付いた一覧を取得
         $stocks = Auth::user()->stocks()->orderBy('created_at', 'DESC')->simplePaginate(6);
-        
-        return view('index',compact('stocks'));
+
+        return view('index', compact('stocks'));
     }
 
 
